@@ -1,10 +1,10 @@
 def call() {
     checkout([
         $class: 'GitSCM',
-        branches: [[name: '*/master]],  
+        branches: [[name: '*/master']], // Fix: Properly close brackets and quotes
         userRemoteConfigs: [[
-            url: 'https://github.com/Bharathdev07/springpetclinic--project.git',
-            credentialsId: 'github-tokken'
+            credentialsId: 'github-tokken', 
+            url: 'https://github.com/Bharathdev07/springpetclinic--project.git'
         ]]
     ])
 }
